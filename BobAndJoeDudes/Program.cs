@@ -2,9 +2,13 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            Guy Joe = new Guy { Name = "Joe", Cash = 100 };
+            Guy Bob = new Guy{ Name = "Bob", Cash = 50 };
+
+
+
         }
     }
 }
