@@ -15,19 +15,19 @@
                 Console.Write("Enter an amount: ");
                 string? howMuch = Console.ReadLine();
                 if (howMuch == "") return;
-                if (int.TryParse(howMuch, out int cash))
+                if (int.TryParse(howMuch, out int amount))
                 {
                     Console.Write("Who should give the cash: ");
                     string? whichGuy = Console.ReadLine();
-                    if(whichGuy == "Joe")
+                    if(whichGuy == "Joe" & joe.Cash != 0 )
                     {
-                        joe.GiveCash(cash);
-                        bob.ReceiveCash(cash);
+                        int cashGiven = joe.GiveCash(amount);
+                        bob.ReceiveCash(cashGiven);
                     }
-                    else if (whichGuy == "Bob")
+                    else if (whichGuy == "Bob" & bob.Cash != 0)
                     {
-                        bob.GiveCash(cash);
-                        joe.ReceiveCash(cash);
+                        int cashGiven = bob.GiveCash(amount);
+                        joe.ReceiveCash(cashGiven);
                     }
                     else
                     {
